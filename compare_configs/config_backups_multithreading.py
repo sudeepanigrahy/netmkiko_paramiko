@@ -1,8 +1,5 @@
-import netmiko
 from netmiko import ConnectHandler
 import datetime
-import difflib
-import webbrowser
 import sys
 from netmiko.exceptions import NetmikoAuthenticationException
 from netmiko.exceptions import NetMikoTimeoutException
