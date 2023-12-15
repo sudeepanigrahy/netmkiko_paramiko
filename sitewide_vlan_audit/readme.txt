@@ -20,18 +20,5 @@ checkvlansrootport: 1, 6, 9
 checkvlanspriority: 3, 7, 10
 checkdownlinktrunkedvlans: 8, 11
 
-sg624-absgs-as01p-fn.imfs.micron.com
-sg624-absgs-as02p-fn.imfs.micron.com
-sg624-ac1ammo-as01p-fn.imfs.micron.com
-sg624-f10a-gh4-as1-fn.imfs.micron.com
-
-File "C:\Users\spanigrahy\.spyder-py3\Saves\Python.N\Tasks\kira_vlan_task1\testmain.py", line 151, in work
-    if downlink_port1[0] in n:
-sg624-ac1tdr202-as0201p-fn.imfs.micron.com
-sg624-atdc104-as0701-fn.imfs.micron.com
-
- File "C:\Users\spanigrahy\.spyder-py3\Saves\Python.N\Tasks\kira_vlan_task1\checkvlansrootport.py", line 101, in vlansrootport
-    if j == root_port[0]:
-sg624-f10a-sto-as4-scada-fn.imfs.micron.com
 
 
