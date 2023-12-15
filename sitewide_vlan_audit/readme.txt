@@ -1,3 +1,5 @@
+Below are the 13 columns of data that will be created when the testmain.py is run:
+
 1-'Spanning-tree Root' : 'yes' if all vlans have primary uplink as root port, otherwise 'no'
 2-'AS-Used VLANs' : list of vlans used by all access ports
 3-'AS-Configured VLANs' : list of all vlans configured on the switch
