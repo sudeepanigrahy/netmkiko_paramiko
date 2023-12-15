@@ -22,7 +22,7 @@ def downlinktrunkedvlans(string1, string2, switch2):
             dtpo1.loc[i, j] = xx[j]
             
     downlink_port=[]
-    switch2 = str(switch2.split(".imfs")[0])
+    switch2 = str(switch2.split(".****")[0])
     if 'svi' in switch2:
         switch2 = switch2.split("-svi")[0]
     else: pass
@@ -69,17 +69,15 @@ def downlinktrunkedvlans(string1, string2, switch2):
     
     
 if __name__=='__main__':
-    #switch1 = 'sg624-frm2-ds3-mn.imfs.micron.com'
-    #switch2 = 'sg624-frt7-as12-mn236'
     """
     try:
         kwargs = {
-            'device_type': 'cisco_nxos','ip': switch1,'username': 'nwtools','password': '!1Jst4Tls7!'
+            'device_type': 'cisco_nxos','ip': switch1,'username': '********','password': '********'
             }
         connection = ConnectHandler(**kwargs)
     except:
         kwargs = {
-            'device_type': 'cisco_ios_telnet','ip': switch1,'username': 'nwtools','password': '!1Jst4Tls7!'
+            'device_type': 'cisco_ios_telnet','ip': switch1,'username': '******','password': '********'
             }
         connection = ConnectHandler(**kwargs)
 """      
