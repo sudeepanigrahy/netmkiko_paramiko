@@ -154,14 +154,8 @@ if __name__=='__main__':
     #return ['timestamp', 'switch name', 'discrepancy', 'vlans', 'trunked_vlans', 'remarks']
     current_time = time.time()
     formatted_time = datetime.fromtimestamp(current_time).strftime("%m-%d-%Y %H:%M:%S") 
-
-
-    #switch = "sg209-b1rm5x-as6-cn240"
-    #switch = "sg209-b1mr4d-as1-ah-mn-vpc"
-    #switch = "sg211-frm3-as2-famn301"
-    switch = "sg624-frm2-ds3-mn"
-
+    switch = "***************"
     kwargs = {
-        'device_type': 'cisco_nxos','ip': switch,'username': 'spanigrahy','password': 'Sueme@0125','port':'22'
+        'device_type': 'cisco_nxos','ip': switch,'username': '**********','password': '********','port':'22'
         }
     connection = ConnectHandler(**kwargs)
