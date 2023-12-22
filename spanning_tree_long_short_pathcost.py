@@ -1,7 +1,3 @@
-"""
-A script to push the AAA config onto switches
-"""
-
 from netmiko import ConnectHandler
 from paramiko.ssh_exception import SSHException
 from netmiko import NetmikoTimeoutException
@@ -43,14 +39,14 @@ def reachability(switchlist):
     for switch in switchlist:
         try:
             kwargs = {
-                'device_type': 'cisco_ios','ip': switch,'username': 'spanigrahy','password': 'Sueme@0127','port':'22'
+                'device_type': 'cisco_ios','ip': switch,'username': '*********','password': '********','port':'22'
                 }
             connection = ConnectHandler(**kwargs)
             pusher(connection, switch)                        
         except:
             try:
                 kwargs = {
-                    'device_type': 'cisco_ios_telnet','ip': switch,'username': 'spanigrahy','password': 'Sueme@0127','port':'23'
+                    'device_type': 'cisco_ios_telnet','ip': switch,'username': '**********','password': '*********','port':'23'
                     }
                 connection = ConnectHandler(**kwargs)
                 pusher(connection, switch)
