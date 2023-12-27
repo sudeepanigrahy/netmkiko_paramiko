@@ -184,13 +184,13 @@ def prework(csv_chunk, t):
         print(f"working on {i}...")
         try:
             kwargs = {
-                'device_type': 'cisco_ios','ip': i,'username': 'spanigrahy','password': 'Sueme@0128','port':'22'
+                'device_type': 'cisco_ios','ip': i,'username': '*********','password': '*********','port':'22'
                 }
             connection = ConnectHandler(**kwargs)
         except:
             try:
                 kwargs = {
-                    'device_type': 'cisco_ios_telnet','ip': i,'username': 'spanigrahy','password': 'Sueme@0128','port':'23'
+                    'device_type': 'cisco_ios_telnet','ip': i,'username': '*********','password': '*********','port':'23'
                     }
                 connection = ConnectHandler(**kwargs)
                 
