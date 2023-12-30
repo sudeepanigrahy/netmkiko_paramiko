@@ -1,6 +1,5 @@
 """
-Script for mapping out the msb lab
-
+Script for mapping out the lab of a site
 """
 
 from netmiko import ConnectHandler
@@ -58,7 +57,7 @@ def neighbor_as_ds_finder(ds_switches):
         global con
         try:
             kwargs = {
-                    'device_type': 'cisco_ios','ip': switch,'username': 'spanigrahy','password': 'Sueme@0123','port':'22'
+                    'device_type': 'cisco_ios','ip': switch,'username': '*********','password': '*********','port':'22'
                     }
             con = ConnectHandler(**kwargs)
             
@@ -66,7 +65,7 @@ def neighbor_as_ds_finder(ds_switches):
         except:
             try:
                 kwargs = {
-                        'device_type': 'cisco_ios','ip': switch,'username': 'spanigrahy','password': 'Sueme@0123','port':'23'
+                        'device_type': 'cisco_ios','ip': switch,'username': '*********','password': '*********','port':'23'
                         }
                 con = ConnectHandler(**kwargs)
                 as_from_ds_finder(con, switch)
@@ -95,7 +94,7 @@ def neighbor_as_from_ds_from_ds_finder(ds_from_ds_switches):
         global conn
         try:
             kwargs = {
-                    'device_type': 'cisco_ios','ip': switch,'username': 'spanigrahy','password': 'Sueme@0123','port':'22'
+                    'device_type': 'cisco_ios','ip': switch,'username': '*********','password': '*********','port':'22'
                     }
             conn = ConnectHandler(**kwargs)
             
@@ -103,7 +102,7 @@ def neighbor_as_from_ds_from_ds_finder(ds_from_ds_switches):
         except:
             try:
                 kwargs = {
-                        'device_type': 'cisco_ios','ip': switch,'username': 'spanigrahy','password': 'Sueme@0123','port':'23'
+                        'device_type': 'cisco_ios','ip': switch,'username': '*********','password': '*********','port':'23'
                         }
                 conn = ConnectHandler(**kwargs)
                 as_from_ds_from_ds_finder(conn, switch)
@@ -117,14 +116,14 @@ for switch in cores:
     global connection
     try:
         kwargs = {
-                'device_type': 'cisco_ios','ip': switch,'username': 'spanigrahy','password': 'Sueme@0123','port':'22'
+                'device_type': 'cisco_ios','ip': switch,'username': '*********','password': '*********','port':'22'
                 }
         connection = ConnectHandler(**kwargs)
         neighbor_ds_finder(connection, switch)                        
     except:
         try:
             kwargs = {
-                    'device_type': 'cisco_ios','ip': switch,'username': 'spanigrahy','password': 'Sueme@0123','port':'23'
+                    'device_type': 'cisco_ios','ip': switch,'username': '*********','password': '*********','port':'23'
                     }
             connection = ConnectHandler(**kwargs)
             neighbor_ds_finder(connection, switch)
