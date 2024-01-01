@@ -78,12 +78,12 @@ def work(connection, switch):
             try:
                 try:
                     kwargs = {
-                        'device_type': 'cisco_ios','ip': n,'username': 'spanigrahy','password': 'Sueme@0127'
+                        'device_type': 'cisco_ios','ip': n,'username': '**************','password': '**************'
                         }
                     connection1 = ConnectHandler(**kwargs)
                 except:
                     kwargs = {
-                        'device_type': 'cisco_ios_telnet','ip': n,'username': 'spanigrahy','password': 'Sueme@0127'
+                        'device_type': 'cisco_ios_telnet','ip': n,'username': '**************','password': '**************'
                         }
                     connection1 = ConnectHandler(**kwargs)
             except:
@@ -103,12 +103,12 @@ def work(connection, switch):
                     try:
                         #print("here is n: ",n)
                         kwargs = {
-                            'device_type': 'cisco_ios','ip': n,'username': 'spanigrahy','password': 'Sueme@0127'
+                            'device_type': 'cisco_ios','ip': n,'username': '**************','password': '**************'
                             }
                         connection2 = ConnectHandler(**kwargs)
                     except:
                         kwargs = {
-                            'device_type': 'cisco_ios_telnet','ip': n,'username': 'spanigrahy','password': 'Sueme@0127'
+                            'device_type': 'cisco_ios_telnet','ip': n,'username': '**************','password': '**************'
                             }
                         connection2 = ConnectHandler(**kwargs)
                     
@@ -226,14 +226,14 @@ def reachability(switchlist):
     for switch in switchlist:
         try:
             kwargs = {
-                'device_type': 'cisco_ios','ip': switch,'username': 'spanigrahy','password': 'Sueme@0125', 'port': '22'
+                'device_type': 'cisco_ios','ip': switch,'username': '**************','password': '**************', 'port': '22'
                 }
             connection = ConnectHandler(**kwargs)
             work(connection, switch)                        
         except:
             try:
                 kwargs = {
-                    'device_type': 'cisco_ios_telnet','ip': switch,'username': 'spanigrahy','password': 'Sueme@0125', 'port': '23'
+                    'device_type': 'cisco_ios_telnet','ip': switch,'username': '**************','password': '**************', 'port': '23'
                     }
                 connection = ConnectHandler(**kwargs)
                 work(connection, switch)
@@ -259,13 +259,13 @@ for i in inputswitchlist:
     print(f"working on {i}...")
     try:
         kwargs = {
-            'device_type': 'cisco_ios','ip': i,'username': 'spanigrahy','password': 'Sueme@0127','port':'22'
+            'device_type': 'cisco_ios','ip': i,'username': '**************','password': '**************','port':'22'
             }
         connection = ConnectHandler(**kwargs)
     except:
         try:
             kwargs = {
-                'device_type': 'cisco_ios_telnet','ip': i,'username': 'spanigrahy','password': 'Sueme@0127','port':'23'
+                'device_type': 'cisco_ios_telnet','ip': i,'username': '**************','password': '**************','port':'23'
                 }
             connection = ConnectHandler(**kwargs)
         except:
