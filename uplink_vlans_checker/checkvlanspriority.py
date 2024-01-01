@@ -104,17 +104,17 @@ if __name__=='__main__':
     formatted_time = datetime.fromtimestamp(current_time).strftime("%m-%d-%Y %H:%M:%S") 
     res_check_priority_list = []
 
-    #switch = "sg211-cr1-cs4-famn"
-    #switch = "sg624-afmr0-cs1-cn"
-    switch = 'sg209-b1mr5y-cs1-vsn-vpc'
+    #switch = "**************"
+    #switch = "**************"
+    switch = '**************'
     try:
         kwargs = {
-            'device_type': 'cisco_nxos','ip': switch,'username': 'spanigrahy','password': 'Sueme@0125','port':'22'
+            'device_type': 'cisco_nxos','ip': switch,'username': '**************','password': '**************','port':'22'
             }
         connection = ConnectHandler(**kwargs)
     except:
         kwargs = {
-            'device_type': 'cisco_ios_telnet','ip': switch,'username': 'spanigrahy','password': 'Sueme@0125','port':'23'
+            'device_type': 'cisco_ios_telnet','ip': switch,'username': '**************','password': '**************','port':'23'
             }
         connection = ConnectHandler(**kwargs)
 
