@@ -69,17 +69,17 @@ def downlinktrunkedvlans(string1, string2, switch2):
     
     
 if __name__=='__main__':
-    #switch1 = 'sg624-frm2-ds3-mn.imfs.micron.com'
-    #switch2 = 'sg624-frt7-as12-mn236'
+    #switch1 = '**************'
+    #switch2 = '**************'
     """
     try:
         kwargs = {
-            'device_type': 'cisco_nxos','ip': switch1,'username': 'nwtools','password': '!1Jst4Tls7!'
+            'device_type': 'cisco_nxos','ip': switch1,'username': '**************','password': '**************'
             }
         connection = ConnectHandler(**kwargs)
     except:
         kwargs = {
-            'device_type': 'cisco_ios_telnet','ip': switch1,'username': 'nwtools','password': '!1Jst4Tls7!'
+            'device_type': 'cisco_ios_telnet','ip': switch1,'username': '**************','password': '**************'
             }
         connection = ConnectHandler(**kwargs)
 """      
