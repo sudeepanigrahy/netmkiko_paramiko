@@ -45,17 +45,17 @@ if __name__=='__main__':
     formatted_time = datetime.fromtimestamp(current_time).strftime("%m-%d-%Y %H:%M:%S") 
 
 
-    #switch = "sg209-b1rm5x-as6-cn240"
-    switch = "sg624-frt7-as12-mn236"
+    #switch = "**************"
+    switch = "**************"
 
     try:
         kwargs = {
-            'device_type': 'cisco_ios','ip': switch,'username': 'nwtools','password': '!1Jst4Tls7!'
+            'device_type': 'cisco_ios','ip': switch,'username': '**************','password': '**************'
             }
         connection = ConnectHandler(**kwargs)
     except:
         kwargs = {
-            'device_type': 'cisco_ios_telnet','ip': switch,'username': 'nwtools','password': '!1Jst4Tls7!'
+            'device_type': 'cisco_ios_telnet','ip': switch,'username': '**************','password': '**************'
             }
         connection = ConnectHandler(**kwargs)
         
