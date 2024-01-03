@@ -16,12 +16,12 @@ res_list = []
 switch = 'sg209-b1mr4d-cs2-vsn-vpc'
 try:
     kwargs = {
-        'device_type': 'cisco_ios','ip': switch,'username': 'spanigrahy','password': 'Sueme@0125','port':'22'
+        'device_type': 'cisco_ios','ip': switch,'username': '**********','password': '**********','port':'22'
         }
     connection = ConnectHandler(**kwargs)
 except:
     kwargs = {
-        'device_type': 'cisco_ios','ip': switch,'username': 'spanigrahy','password': 'Sueme@0125','port':'23'
+        'device_type': 'cisco_ios','ip': switch,'username': '**********','password': '**********','port':'23'
         }
     connection = ConnectHandler(**kwargs)
     
@@ -30,28 +30,28 @@ test_string1 = connection.send_command("sh run")
 test_list1 = test_string1.splitlines()
 #test_list2 = test_string2.splitlines()
 
-if "sg209" in switch:
-    ip1 = "10.160.20.60"
-    ip2 = "10.160.21.9"
-    if "rc4sing" in test_string1 and "wc4sing" in test_string1 and ip1 in test_string1 and ip2 in test_string1:
+if "xxxxx" in switch:
+    ip1 = "**********"
+    ip2 = "**********"
+    if "**********" in test_string1 and "**********" in test_string1 and ip1 in test_string1 and ip2 in test_string1:
         discrepancy = "no"
         remark = ""
     else:
         discrepancy = "yes"
         remark = "SNMP server missing"
-elif "sg624" in switch:
-    ip1 = "10.193.189.120"
-    ip2 = "10.193.189.26"
-    if "rc4sing" in test_string1 and "wc4sing" in test_string1 and ip1 in test_string1 and ip2 in test_string1:
+elif "xxxxx" in switch:
+    ip1 = "***********"
+    ip2 = "***********"
+    if "***********" in test_string1 and "***********" in test_string1 and ip1 in test_string1 and ip2 in test_string1:
         discrepancy = "no"
         remark = ""
     else:
         discrepancy = "yes"
         remark = "SNMP server missing"
-elif "sg211" in switch:
-    ip1 = "172.25.243.229"
-    ip2 = "172.25.243.230"
-    if "rc4sing" in test_string1 and "wc4sing" in test_string1 and ip1 in test_string1 and ip2 in test_string1:
+elif "xxxxx" in switch:
+    ip1 = "***********"
+    ip2 = "***********"
+    if "***********" in test_string1 and "***********" in test_string1 and ip1 in test_string1 and ip2 in test_string1:
         discrepancy = "no"
         remark = ""
     else:
