@@ -64,28 +64,28 @@ def check_snmp_config(i_string, i_hostname):
     formatted_time = datetime.fromtimestamp(current_time).strftime("%m-%d-%Y %H:%M:%S")        
     res_list = []
     
-    if "sg209" in i_hostname:
-        ip1 = "10.160.20.60"
-        ip2 = "10.160.21.9"
-        if "rc4sing" in i_string and "wc4sing" in i_string and ip1 in i_string and ip2 in i_string:
+    if "xxxxx" in i_hostname:
+        ip1 = "**********"
+        ip2 = "**********"
+        if "**********" in i_string and "**********" in i_string and ip1 in i_string and ip2 in i_string:
             discrepancy = "no"
             remark = ""
         else:
             discrepancy = "yes"
             remark = "SNMP server missing"
     elif "sg624" in i_hostname:
-        ip1 = "10.193.189.120"
-        ip2 = "10.193.189.26"
-        if "rc4sing" in i_string and "wc4sing" in i_string and ip1 in i_string and ip2 in i_string:
+        ip1 = "**********"
+        ip2 = "**********"
+        if "**********" in i_string and "**********" in i_string and ip1 in i_string and ip2 in i_string:
             discrepancy = "no"
             remark = ""
         else:
             discrepancy = "yes"
             remark = "SNMP server missing"
     elif "sg211" in i_hostname:
-        ip1 = "172.25.243.229"
-        ip2 = "172.25.243.230"
-        if "rc4sing" in i_string and "wc4sing" in i_string and ip1 in i_string and ip2 in i_string:
+        ip1 = "**********"
+        ip2 = "**********"
+        if "**********" in i_string and "**********" in i_string and ip1 in i_string and ip2 in i_string:
             discrepancy = "no"
             remark = ""
         else:
