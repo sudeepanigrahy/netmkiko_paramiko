@@ -14,9 +14,9 @@ class InputHandler:
         self._nexus_device_list = list()
         self._cisco_device_list = list()
 
-        if(i_site_name is SiteName.F10NXA): self._accepted_ip_range = ['10.193.', '10.194.', '10.195.']
-        elif(i_site_name is SiteName.F10W): self._accepted_ip_range = ['172.25.', '172.28.']
-        elif(i_site_name is SiteName.MSB): self._accepted_ip_range = ['10.160.', '10.198.']
+        if(i_site_name is SiteName.F10NXA): self._accepted_ip_range = ['x.x.', 'x.x.', 'x.x.']
+        elif(i_site_name is SiteName.F10W): self._accepted_ip_range = ['x.x..', 'x.x.']
+        elif(i_site_name is SiteName.MSB): self._accepted_ip_range = ['x.x.', 'x.x.']
         else:
             # logging placeholder 
             self._accepted_ip_range = ['None']
