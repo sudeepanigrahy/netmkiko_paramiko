@@ -5,188 +5,6 @@ import IOHandler
 import csv
 import pandas as pd
 
-# returns a list of dictionary for each queried device
-def check_crc(i_string, i_hostname):
-    
-    res_dict_list = []
-
-    current_time = time.time()
-    formatted_time = datetime.fromtimestamp(current_time).strftime("%m-%d-%Y %H:%M:%S")    
-    
-    expression_1 = "^.*Ethernet[0-9]+(\/[0-9]+)+.*"
-    expression_2 = "^.*E[0-9]+(\/[0-9]+)+.*"
-    i_string = i_string.replace("\\r\\n", " ")
-    string_split_by_whitespace = i_string.split()
-    
-    cur_index = 0
-    cur_sub_index = 0
-    for entry in string_split_by_whitespace:
-        if(re.search(expression_1, entry) or re.search(expression_2, entry)):
-            input_error = None
-            output_error = None
-            CRC_error = None
-            cur_sub_index = cur_index
-            interface_name = string_split_by_whitespace[cur_index]
-            for sub_entry in string_split_by_whitespace[cur_index:]:
-                if('input' in sub_entry):
-                    input_error = string_split_by_whitespace[cur_sub_index - 1]
-                if('output' in sub_entry):
-                    output_error = string_split_by_whitespace[cur_sub_index - 1]
-                if('CRC' in sub_entry):
-                    CRC_error = string_split_by_whitespace[cur_sub_index - 1]
-                if(input_error != None and output_error != None and CRC_error != None): break
-                cur_sub_index += 1
-            
-            res_dict_list.append({
-                    'timestamp': formatted_time,
-                    'switch name': i_hostname,
-                    'interface name': interface_name,
-                    'CRC error': CRC_error,
-                    'input error': input_error,
-                    'output_error': output_error
-                })
-
-        cur_index += 1
-
-    return res_dict_list
-
-def check_platform_resources(i_string, i_hostname):
-    
-    current_time = time.time()
-    formatted_time = datetime.fromtimestamp(current_time).strftime("%m-%d-%Y %H:%M:%S") 
-    
-    if('% Invalid input' in i_string):
-        return {
-            'timestamp': formatted_time,
-            'switch name': i_hostname,
-            'cpu status': '-',
-            'mem status': '-',
-            'remarks': 'command not found on device'
-        }
-
-    i_string = i_string.replace("\\r\\n", " ")
-    string_split_by_whitespace = i_string.split()
-    expression_1 = "^Processor.*"
-    expression_2 = "^DRAM.*"
-
-    cur_index = 0
-    cpu_status = None
-    mem_status = None
-    for entry in string_split_by_whitespace:
-        if(re.search(expression_1, entry)):
-            cpu_status = string_split_by_whitespace[cur_index + 1]
-            cpu_status = cpu_status.replace('%', '')
-        if(re.search(expression_2, entry)):
-            temp_mem_status = string_split_by_whitespace[cur_index + 1]
-            mem_status = temp_mem_status.split('(')[1]
-            mem_status = mem_status[:-1]
-        if(cpu_status != None and mem_status != None):
-            break
-
-        cur_index += 1
-
-    return {
-        'timestamp': formatted_time,
-        'switch name': i_hostname,
-        'cpu status': cpu_status,
-        'mem status': mem_status,
-        'remarks': ''
-    }
-
-def check_poe(i_string, i_hostname):
-
-    current_time = time.time()
-    formatted_time = datetime.fromtimestamp(current_time).strftime("%m-%d-%Y %H:%M:%S")
-
-    if('% Invalid input' in i_string):
-        return {
-            'timestamp': formatted_time,
-            'switch name': i_hostname,
-            'available power': '-',
-            'used power': '-',
-            'rem power': '-',
-            'percentage used': '-',
-            'remarks': 'command not found on device'
-        }    
-    
-    if(i_string == ''):
-        return {
-            'timestamp': formatted_time,
-            'switch name': i_hostname,
-            'available power': '-',
-            'used power': '-',
-            'rem power': '-',
-            'percentage used': '-',
-            'remarks': 'command produces no output on device'
-        } 
-
-    expression_1 = "^Available.*"
-    expression_2 = "^Used.*"
-    expression_3 = "^Remaining.*"
-    i_string = i_string.replace("\\r\\n", " ")
-    string_split_by_whitespace = i_string.split()
-
-    cur_index = 0
-    available_power = None
-    used_power = None
-    rem_power = None
-    
-    for entry in string_split_by_whitespace:
-        if(re.search(expression_1, entry)):
-            available_power = string_split_by_whitespace[cur_index + 11]
-        if(re.search(expression_2, entry)):
-            used_power = string_split_by_whitespace[cur_index + 11]
-        if(re.search(expression_3, entry)):
-            rem_power = string_split_by_whitespace[cur_index + 11]
-        if(available_power != None and used_power != None and rem_power != None):
-            break
-        cur_index += 1
-    
-    percentage_used = str((float(used_power) / float(rem_power)) * 100)
-
-    return {
-        'timestamp': formatted_time,
-        'switch name': i_hostname,
-        'available power': available_power,
-        'used power': used_power,
-        'rem power': rem_power,
-        'percentage used': percentage_used,
-        'remarks': ''
-    }
-
-def check_disconnected_ports(i_string, i_hostname):
-    
-    res_dict_list = []
-
-    current_time = time.time()
-    formatted_time = datetime.fromtimestamp(current_time).strftime("%m-%d-%Y %H:%M:%S")    
-    
-    expression_1 = "^(Gi|Twe|Eth|Et|Hu|Fo|Te)[0-9]+(\/[0-9]+)+.*"
-
-    i_string = i_string.replace("\\r\\n", " ")
-    string_split_by_whitespace = i_string.split()
-    
-    cur_index = 0
-    cur_sub_index = 0
-    for entry in string_split_by_whitespace:
-        
-        if(re.search(expression_1, entry)):
-            cur_sub_index = cur_index
-            for sub_entry in string_split_by_whitespace[cur_index+1:]:
-                if(re.search(expression_1, sub_entry)): break
-                if(sub_entry == 'notconnect'):
-                    interface_name = string_split_by_whitespace[cur_index]
-                    res_dict_list.append({
-                        'timestamp': formatted_time,
-                        'switch name': i_hostname,
-                        'interface name': interface_name
-                    })                
-                cur_sub_index += 1     
-
-        cur_index += 1
-
-    return res_dict_list
-
 def check_snmp_config(i_string, i_hostname): 
     #return ['timestamp', 'switch name', 'discrepancy', 'remarks']
     #once this function is called, it'll return the above dict inside a list, to the caller.
@@ -196,28 +14,28 @@ def check_snmp_config(i_string, i_hostname):
     formatted_time = datetime.fromtimestamp(current_time).strftime("%m-%d-%Y %H:%M:%S")        
     res_list = []
     
-    if "sg209" in i_hostname:
-        ip1 = "10.160.20.60"
-        ip2 = "10.160.21.9"
-        if "rc4sing" in i_string and "wc4sing" in i_string and ip1 in i_string and ip2 in i_string:
+    if "xxxxx" in i_hostname:
+        ip1 = "**********"
+        ip2 = "**********"
+        if "**********" in i_string and "**********" in i_string and ip1 in i_string and ip2 in i_string:
             discrepancy = "no"
             remark = ""
         else:
             discrepancy = "yes"
             remark = "SNMP server missing"
-    elif "sg624" in i_hostname:
-        ip1 = "10.193.189.120"
-        ip2 = "10.193.189.26"
-        if "rc4sing" in i_string and "wc4sing" in i_string and ip1 in i_string and ip2 in i_string:
+    elif "xxxxx" in i_hostname:
+        ip1 = "**********"
+        ip2 = "**********"
+        if "**********" in i_string and "**********" in i_string and ip1 in i_string and ip2 in i_string:
             discrepancy = "no"
             remark = ""
         else:
             discrepancy = "yes"
             remark = "SNMP server missing"
-    elif "sg211" in i_hostname:
-        ip1 = "172.25.243.229"
-        ip2 = "172.25.243.230"
-        if "rc4sing" in i_string and "wc4sing" in i_string and ip1 in i_string and ip2 in i_string:
+    elif "xxxxx" in i_hostname:
+        ip1 = "**********"
+        ip2 = "**********"
+        if "**********" in i_string and "**********" in i_string and ip1 in i_string and ip2 in i_string:
             discrepancy = "no"
             remark = ""
         else:
