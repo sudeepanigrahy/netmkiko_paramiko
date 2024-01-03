@@ -11,14 +11,14 @@ class QueryHandler:
             self._default_device_profile = {
                 'device_type': 'cisco_ios',
                 'host': str(i_target_ip),
-                'username': 'nwtools',
-                'password': '!1Jst4Tls7!'
+                'username': '***********',
+                'password': '***********'
             }
             self._telnet_device_profile = {
                 'device_type': 'cisco_ios_telnet',
                 'host': str(i_target_ip),
-                'username': 'nwtools',
-                'password': '!1Jst4Tls7!'
+                'username': '***********',
+                'password': '***********'
             }
         
         elif(i_device_type is DeviceType.CISCO_NXOS): 
@@ -26,14 +26,14 @@ class QueryHandler:
             self._default_device_profile = {
                 'device_type': 'cisco_nxos',
                 'host': str(i_target_ip),
-                'username': 'nwtools',
-                'password': '!1Jst4Tls7!'
+                'username': '***********',
+                'password': '***********'
             }
             self._telnet_device_profile = {
                 'device_type': 'cisco_ios_telnet',
                 'host': str(i_target_ip),
-                'username': 'nwtools',
-                'password': '!1Jst4Tls7!'
+                'username': '***********',
+                'password': '***********'
             }
         
         elif(i_device_type is DeviceType.ARISTA_EOS): 
@@ -41,14 +41,14 @@ class QueryHandler:
             self._default_device_profile = {
                 'device_type': 'arista_eos',
                 'host' : str(i_target_ip),
-                'username' : "nwtools",
-                'password' : "!1Jst4Tls7!"
+                'username' : "***********",
+                'password' : "***********"
             }
             self._telnet_device_profile = {
                 'device_type': 'arista_eos_telnet',
                 'host': str(i_target_ip),
-                'username': 'nwtools',
-                'password': '!1Jst4Tls7!'
+                'username': '***********',
+                'password': '***********'
             }
         
         else:
@@ -56,14 +56,14 @@ class QueryHandler:
             self._default_device_profile = {
                 'device_type': 'autodetect',
                 'host': str(i_target_ip),
-                'username': 'nwtools',
-                'password': '!1Jst4Tls7!'
+                'username': '***********',
+                'password': '***********'
             }
             self._telnet_device_profile = {
                 'device_type': 'cisco_ios_telnet',
                 'host': str(i_target_ip),
-                'username': 'nwtools',
-                'password': '!1Jst4Tls7!'
+                'username': '***********',
+                'password': '***********'
             }
 
         self._host = str(i_target_ip)
