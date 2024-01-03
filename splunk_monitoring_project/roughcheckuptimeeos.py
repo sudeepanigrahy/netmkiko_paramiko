@@ -17,9 +17,7 @@ def work(connection, switch):
     formatted_time = datetime.fromtimestamp(current_time).strftime("%m-%d-%Y %H:%M:%S") 
     res_list = []
     
-    #switch = "sg209-b1rm5x-as6-cn240"
-    #switch = "sg209-b1mr5y-as2-vsn-vpc"
-    #switch = "sg211-frm3-as2-famn301"
+    #switch = "***********"
 
     test_string1 = connection.send_command("sh version")
     
@@ -109,13 +107,13 @@ for i in inputswitchlist:
     print(f"working on {i}...")
     try:
         kwargs = {
-            'device_type': 'cisco_nxos','ip': i,'username': 'spanigrahy','password': 'Sueme@0125','port':'22'
+            'device_type': 'cisco_nxos','ip': i,'username': '***********','password': '***********','port':'22'
             }
         connection = ConnectHandler(**kwargs)
     except:
         try:
             kwargs = {
-                'device_type': 'cisco_ios_telnet','ip': i,'username': 'spanigrahy','password': 'Sueme@0125','port':'23'
+                'device_type': 'cisco_ios_telnet','ip': i,'username': '***********','password': '***********','port':'23'
                 }
             connection = ConnectHandler(**kwargs)
         except:
