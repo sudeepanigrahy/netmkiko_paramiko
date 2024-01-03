@@ -9,21 +9,17 @@ current_time = time.time()
 formatted_time = datetime.fromtimestamp(current_time).strftime("%m-%d-%Y %H:%M:%S") 
 
 
-#switch = "sg209-b1rm5x-as6-cn240"
-switch = 'sg624-aamr0-aep10-isilon51-as1-sn-vpc403'
-#switch = "sg211-frm4-as3-fbmn.wlsg.micron.com"
-#switch = "sg211-frm7-as2-fbmn.wlsg.micron.com"
-#switch = "sg211-cr2-as1-fbmn.wlsg.micron.com"
-#switch = "sg211-frm7-as1-fbmn.wlsg.micron.com"
+#switch = "**********"
+switch = '**********'
 
 try:
     kwargs = {
-        'device_type': 'cisco_nxos','ip': switch,'username': 'nwtools','password': '!1Jst4Tls7!'
+        'device_type': 'cisco_nxos','ip': switch,'username': '**********','password': '**********'
         }
     connection = ConnectHandler(**kwargs)
 except:
     kwargs = {
-        'device_type': 'cisco_ios_telnet','ip': switch,'username': 'nwtools','password': '!1Jst4Tls7!'
+        'device_type': 'cisco_ios_telnet','ip': switch,'username': '**********','password': '**********'
         }
     connection = ConnectHandler(**kwargs)
     
