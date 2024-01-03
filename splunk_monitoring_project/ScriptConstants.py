@@ -75,29 +75,29 @@ ARISTA_EOS_COMMAND_SET = {
 
 }
 
-F10NXA_SNMP_SERVER_IP = ['10.193.189.26', '10.193.189.120']
-F10W_SNMP_SERVER_IP = ['172.25.243.229', '172.25.243.230']
-MSB_SNMP_SERVER_IP = ['10.160.20.60', '10.160.21.9']
-SNMP_COMMUNITY = 'rc4sing'
-SNMP_VERSION = '2c'
+F10NXA_SNMP_SERVER_IP = ['***********', '***********']
+F10W_SNMP_SERVER_IP = ['***********', '***********']
+MSB_SNMP_SERVER_IP = ['***********', '***********']
+SNMP_COMMUNITY = '***********'
+SNMP_VERSION = '***********'
 
-F10NXA_SYSLOG_SERVER_IP = '10.193.80.162'
-F10W_SYSLOG_SERVER_IP = '172.25.240.105'
-MSB_SYSLOG_SERVER_IP = '10.160.25.150'
+F10NXA_SYSLOG_SERVER_IP = '***********'
+F10W_SYSLOG_SERVER_IP = '***********'
+MSB_SYSLOG_SERVER_IP = '***********'
 
-F10NXA_OUTPUT_FILEPATH = r'\\fsfsnetworksplunk\networksplunk\Output\F10NXA_'
-F10W_OUTPUT_FILEPATH = r'\\tsfsnetworksplunk\networksplunk\Output\F10W_'
-MSB_OUTPUT_FILEPATH = r'\\sifsnetworksplunk\networksplunk\Output\MSB_'
+F10NXA_OUTPUT_FILEPATH = r'***********'
+F10W_OUTPUT_FILEPATH = r'***********'
+MSB_OUTPUT_FILEPATH = r'***********'
 
-F10NXA_WORKING_FILEPATH = r'\\fsfsnetworksplunk\networksplunk\WorkingFolder\F10NXA_'
-F10W_WORKING_FILEPATH = r'C:\Users\spanigrahy\.spyder-py3\Saves\Python.N\WorkingFolder\myworkingfolder\F10W_'
-MSB_WORKING_FILEPATH = r'\\sifsnetworksplunk\networksplunk\WorkingFolder\MSB_'
+F10NXA_WORKING_FILEPATH = r'***********'
+F10W_WORKING_FILEPATH = r'C:\Users\***********\.spyder-py3\Saves\Python.N\WorkingFolder\myworkingfolder\F10W_'
+MSB_WORKING_FILEPATH = r'***********'
 
-CRC_CHECK_FILENAME = "crc_check.csv"                            # Irving
+CRC_CHECK_FILENAME = "crc_check.csv"                           
 MEMORY_CHECK_FILENAME = "memory.csv"                            
-PLATFORM_RESOURCES_CHECK_FILENAME = "platformResources.csv"     # Irving
-POE_CHECK_FILENAME = "poe_check.csv"                            # Irving
-DISCONNECTED_PORTS_CHECK_FILENAME = "disconnectedPorts.csv"     # Irving
+PLATFORM_RESOURCES_CHECK_FILENAME = "platformResources.csv"     
+POE_CHECK_FILENAME = "poe_check.csv"                            
+DISCONNECTED_PORTS_CHECK_FILENAME = "disconnectedPorts.csv"     
 NTP_CONFIG_CHECK_FILENAME = "ntpcheck.csv"
 SYSLOG_CONFIG_CHECK_FILENAME = "syslogcheck.csv"
 SNMP_CONFIG_CHECK_FILENAME = "snmpcheck.csv"
