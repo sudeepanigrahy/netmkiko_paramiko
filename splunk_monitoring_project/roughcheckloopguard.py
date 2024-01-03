@@ -9,18 +9,16 @@ current_time = time.time()
 formatted_time = datetime.fromtimestamp(current_time).strftime("%m-%d-%Y %H:%M:%S") 
 
 
-#switch = "sg211-cr1-cs4-famn"
-#switch= "sg209-b1rm5x-as6-cn240"
-#switch = "sg624-atdr301-ds1-pn"
-switch = "sg624-frt7-as12-mn236"
+#switch = "**********"
+
 try:
     kwargs = {
-        'device_type': 'cisco_ios','ip': switch,'username': 'spanigrahy','password': 'Sueme@0125','port':'22'
+        'device_type': 'cisco_ios','ip': switch,'username': '**********','password': '**********','port':'22'
         }
     connection = ConnectHandler(**kwargs)
 except:
     kwargs = {
-        'device_type': 'cisco_ios','ip': switch,'username': 'spanigrahy','password': 'Sueme@0125','port':'23'
+        'device_type': 'cisco_ios','ip': switch,'username': '**********','password': '**********','port':'23'
         }
     connection = ConnectHandler(**kwargs)
 
