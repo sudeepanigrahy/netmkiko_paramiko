@@ -141,13 +141,13 @@ for i in inputswitchlist:
     print(f"working on {i}...")
     try:
         kwargs = {
-            'device_type': 'arista_eos','ip': i,'username': 'spanigrahy','password': 'Sueme@0125','port':'22'
+            'device_type': 'arista_eos','ip': i,'username': '**********','password': '**********','port':'22'
             }
         connection = ConnectHandler(**kwargs)
     except:
         try:
             kwargs = {
-                'device_type': 'arista_eos_telnet','ip': i,'username': 'spanigrahy','password': 'Sueme@0125','port':'23'
+                'device_type': 'arista_eos_telnet','ip': i,'username': '**********','password': '**********','port':'23'
                 }
             connection = ConnectHandler(**kwargs)
         except:
