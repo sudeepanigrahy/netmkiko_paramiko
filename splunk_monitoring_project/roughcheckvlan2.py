@@ -9,12 +9,10 @@ current_time = time.time()
 formatted_time = datetime.fromtimestamp(current_time).strftime("%m-%d-%Y %H:%M:%S") 
 
 
-switch = "sg624-xamr0-cpd14-leaf123b"
-#switch = "sg209-b1mr4d-as1-ah-mn-vpc"
-#switch = "sg211-frm3-as2-famn301"
+switch = "***********"
 
 kwargs = {
-    'device_type': 'arista_eos','ip': switch,'username': 'spanigrahy','password': 'Sueme@0125','port':'22'
+    'device_type': 'arista_eos','ip': switch,'username': '***********','password': '***********','port':'22'
     }
 connection = ConnectHandler(**kwargs)
 
