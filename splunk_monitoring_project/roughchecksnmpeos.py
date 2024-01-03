@@ -17,9 +17,7 @@ def work(connection, i_hostname):
     formatted_time = datetime.fromtimestamp(current_time).strftime("%m-%d-%Y %H:%M:%S") 
     res_list = []
     
-    #switch = "sg209-b1rm5x-as6-cn240"
-    #switch = "sg209-b1mr5y-as2-vsn-vpc"
-    #switch = "sg211-frm3-as2-famn301"
+    #switch = "***********"
 
     i_string = connection.send_command("sh run")
     
@@ -49,28 +47,28 @@ def work(connection, i_hostname):
             dtpo3.loc[i, j] = xx[j]      
     """
 
-    if "sg209" in i_hostname:
-        ip1 = "10.160.20.60"
-        ip2 = "10.160.21.9"
-        if "rc4sing" in i_string and "wc4sing" in i_string and ip1 in i_string and ip2 in i_string:
+    if "xxxxx" in i_hostname:
+        ip1 = "***********"
+        ip2 = "***********"
+        if "***********" in i_string and "***********" in i_string and ip1 in i_string and ip2 in i_string:
             discrepancy = "no"
             remark = ""
         else:
             discrepancy = "yes"
             remark = "SNMP server missing"
-    elif "sg624" in i_hostname:
-        ip1 = "10.193.189.120"
-        ip2 = "10.193.189.26"
-        if "rc4sing" in i_string and "wc4sing" in i_string and ip1 in i_string and ip2 in i_string:
+    elif "xxxxx" in i_hostname:
+        ip1 = "***********"
+        ip2 = "***********"
+        if "***********" in i_string and "***********" in i_string and ip1 in i_string and ip2 in i_string:
             discrepancy = "no"
             remark = ""
         else:
             discrepancy = "yes"
             remark = "SNMP server missing"
-    elif "sg211" in i_hostname:
-        ip1 = "172.25.243.229"
-        ip2 = "172.25.243.230"
-        if "rc4sing" in i_string and "wc4sing" in i_string and ip1 in i_string and ip2 in i_string:
+    elif "xxxxx" in i_hostname:
+        ip1 = "***********"
+        ip2 = "***********"
+        if "***********" in i_string and "***********" in i_string and ip1 in i_string and ip2 in i_string:
             discrepancy = "no"
             remark = ""
         else:
@@ -106,13 +104,13 @@ for i in inputswitchlist:
     print(f"working on {i}...")
     try:
         kwargs = {
-            'device_type': 'cisco_nxos','ip': i,'username': 'spanigrahy','password': 'Sueme@0125','port':'22'
+            'device_type': 'cisco_nxos','ip': i,'username': '***********','password': '***********','port':'22'
             }
         connection = ConnectHandler(**kwargs)
     except:
         try:
             kwargs = {
-                'device_type': 'cisco_ios_telnet','ip': i,'username': 'spanigrahy','password': 'Sueme@0125','port':'23'
+                'device_type': 'cisco_ios_telnet','ip': i,'username': '***********','password': '***********','port':'23'
                 }
             connection = ConnectHandler(**kwargs)
         except:
