@@ -15,17 +15,17 @@ switch2 = input("Enter the second switch's name, without the domain")
 
 kwargs1 = {
     'device_type': 'cisco_ios',
-    'ip': "sg209-b1mr5y-cs1-mn",
-    'username': 'nwtools',
-    'password': '!1Jst4Tls7!',
+    'ip': "**********",
+    'username': '**********',
+    'password': '**********',
     'port':'22'
     }
 
 kwargs2 = {
     'device_type': 'cisco_ios',
-    'ip': "sg209-b1mr4d-cs2-mn",
-    'username': 'nwtools',
-    'password': '!1Jst4Tls7!',
+    'ip': "**********",
+    'username': '**********',
+    'password': '**********',
     'port':'22'
     }
 
