@@ -1,8 +1,0 @@
-Building configuration...
-Current configuration
-Last configuration change
-NVRAM config last updated
-description
-ip address
-name
-standby
