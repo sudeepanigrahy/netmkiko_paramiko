@@ -98,7 +98,7 @@ def pre_work(pair):
         if e == 0: 
             try:
                 kwargs = {
-                    'device_type': 'cisco_ios','ip': switch,'username': 'nwtools','password': '!1Jst4Tls7!','port':'22'
+                    'device_type': 'cisco_ios','ip': switch,'username': '*********','password': '*********','port':'22'
                     }
                 connection = ConnectHandler(**kwargs)
                 baseline = connection.send_command('show run')
@@ -109,7 +109,7 @@ def pre_work(pair):
             except:
                 try:
                     kwargs = {
-                        'device_type': 'cisco_ios_telnet','ip': switch,'username': 'nwtools','password': '!1Jst4Tls7!','port':'23'
+                        'device_type': 'cisco_ios_telnet','ip': switch,'username': '*********','password': '*********','port':'23'
                         }
                     connection = ConnectHandler(**kwargs)
                     baseline = connection.send_command('show run')
@@ -121,7 +121,7 @@ def pre_work(pair):
                 except:
                     try:
                         kwargs = {
-                            'device_type': 'cisco_nxos','ip': switch,'username': 'nwtools','password': '!1Jst4Tls7!','port':'22'
+                            'device_type': 'cisco_nxos','ip': switch,'username': '*********','password': '*********','port':'22'
                             }
                         connection = ConnectHandler(**kwargs)
                         baseline = connection.send_command('show run')
@@ -132,7 +132,7 @@ def pre_work(pair):
                 
                     except NetMikoAuthenticationException:
                         kwargs = {
-                            'device_type': 'arista_eos','ip': switch,'username': 'nwtools','password': '!1Jst4Tls7!','port':'22'
+                            'device_type': 'arista_eos','ip': switch,'username': '*********','password': '*********','port':'22'
                             }
                         connection = ConnectHandler(**kwargs)
                         baseline = connection.send_command('show run')
@@ -155,7 +155,7 @@ def pre_work(pair):
         elif e == 1:
             try:
                 kwargs = {
-                    'device_type': 'cisco_ios','ip': switch,'username': 'nwtools','password': '!1Jst4Tls7!','port':'22'
+                    'device_type': 'cisco_ios','ip': switch,'username': '*********','password': '*********','port':'22'
                     }
                 connection = ConnectHandler(**kwargs)
                 comparison = connection.send_command('show run')
@@ -166,7 +166,7 @@ def pre_work(pair):
             except:
                 try:
                     kwargs = {
-                        'device_type': 'cisco_ios_telnet','ip': switch,'username': 'nwtools','password': '!1Jst4Tls7!','port':'23'
+                        'device_type': 'cisco_ios_telnet','ip': switch,'username': '*********','password': '*********','port':'23'
                         }
                     connection = ConnectHandler(**kwargs)
                     comparison = connection.send_command('show run')
@@ -178,7 +178,7 @@ def pre_work(pair):
                 except:
                     try:
                         kwargs = {
-                            'device_type': 'cisco_nxos','ip': switch,'username': 'nwtools','password': '!1Jst4Tls7!','port':'22'
+                            'device_type': 'cisco_nxos','ip': switch,'username': '*********','password': '*********','port':'22'
                             }
                         connection = ConnectHandler(**kwargs)
                         comparison = connection.send_command('show run')
@@ -189,7 +189,7 @@ def pre_work(pair):
                 
                     except NetMikoAuthenticationException:
                         kwargs = {
-                            'device_type': 'arista_eos','ip': switch,'username': 'nwtools','password': '!1Jst4Tls7!','port':'22'
+                            'device_type': 'arista_eos','ip': switch,'username': '*********','password': '*********','port':'22'
                             }
                         connection = ConnectHandler(**kwargs)
                         comparison = connection.send_command('show run')
