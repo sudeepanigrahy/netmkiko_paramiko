@@ -72,14 +72,14 @@ def reachability(switchlist):
         print(f"Working on {switch}...")
         try:
             kwargs = {
-                'device_type': 'cisco_ios','ip': switch,'username': 'spanigrahy','password': 'Sueme@1123','port':'22'
+                'device_type': 'cisco_ios','ip': switch,'username': '**********','password': '**********','port':'22'
                 }
             connection = ConnectHandler(**kwargs)
             work(connection, switch)                        
         except:
             try:
                 kwargs = {
-                    'device_type': 'cisco_ios_telnet','ip': switch,'username': 'spanigrahy','password': 'Sueme@1123','port':'23'
+                    'device_type': 'cisco_ios_telnet','ip': switch,'username': '**********','password': '**********','port':'23'
                     }
                 connection = ConnectHandler(**kwargs)
                 work(connection, switch)
