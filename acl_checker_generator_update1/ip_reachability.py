@@ -8,20 +8,20 @@ def reachability(device):
     global connection
     try:
         kwargs = {
-            'device_type': 'cisco_ios','ip': device,'username': 'nwtools','password': '!1Jst4Tls7!','port':'22'
+            'device_type': 'cisco_ios','ip': device,'username': '--------','password': '--------','port':'22'
             }
         connection = ConnectHandler(**kwargs)
         
     except:
         try:
             kwargs = {
-                'device_type': 'cisco_ios_telnet','ip': device,'username': 'nwtools','password': '!1Jst4Tls7!','port':'23'
+                'device_type': 'cisco_ios_telnet','ip': device,'username': '--------','password': '---------','port':'23'
                 }
             connection = ConnectHandler(**kwargs)
         except:    
             try:
                 kwargs = {
-                    'device_type': 'arista_eos','ip': device,'username': 'nwtools','password': '!1Jst4Tls7!','port':'22'
+                    'device_type': 'arista_eos','ip': device,'username': '--------','password': '---------','port':'22'
                     }
                 connection = ConnectHandler(**kwargs)
             
