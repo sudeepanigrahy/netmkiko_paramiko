@@ -17,7 +17,7 @@ for i in x:
     s = i
     try:
         kwargs = {
-            'device_type': 'cisco_ios','ip': s,'username': 'spanigrahy','password': 'Sueme@0126','port':'22'
+            'device_type': 'cisco_ios','ip': s,'username': '*******','password': '*******','port':'22'
             }
         connection = ConnectHandler(**kwargs)
         
@@ -27,7 +27,7 @@ for i in x:
     except:
         try:
             kwargs = {
-                'device_type': 'cisco_ios','ip': s,'username': 'spanigrahy','password': 'Sueme@0126','port':'23'
+                'device_type': 'cisco_ios','ip': s,'username': '*******','password': '*******','port':'23'
                 }
             connection = ConnectHandler(**kwargs)
             
