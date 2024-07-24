@@ -12,33 +12,33 @@ import threading
 
 kwargs = {
     'device_type': 'cisco_ios',
-    'ip': "sg209-b1rm5x-as6-cn240",
-    'username': 'spanigrahy',
-    'password': 'Sueme@0124',
+    'ip': "*******",
+    'username': '*******',
+    'password': '*******',
     'port':'22'
     }
 
 kwargs1 = {
     'device_type': 'cisco_ios',
-    'ip': "sg209-b1mr5y-as4-cn",
-    'username': 'spanigrahy',
-    'password': 'Sueme@0124',
+    'ip': "*******",
+    'username': '*******',
+    'password': '*******',
     'port':'22'
     }
 
 kwargs2 = {
     'device_type': 'cisco_ios',
-    'ip': "ssg209-b1mr5y-as3-cn",
-    'username': 'spanigrahy',
-    'password': 'Sueme@0124',
+    'ip': "*******",
+    'username': '*******',
+    'password': '*******',
     'port':'22'
     }
 
 kwargs3 = {
     'device_type': 'cisco_ios',
-    'ip': "sg209-b1rm2w-as22-cn188",
-    'username': 'spanigrahy',
-    'password': 'Sueme@0124',
+    'ip': "*******",
+    'username': '*******',
+    'password': '*******',
     'port':'22'
     }
 
