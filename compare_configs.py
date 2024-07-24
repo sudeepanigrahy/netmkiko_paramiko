@@ -15,17 +15,17 @@ switch2 = input("Enter the second switch's name, without the domain")
 
 kwargs1 = {
     'device_type': 'cisco_ios_telnet',
-    'ip': "sg209-b1mr5y-cs1-mn",
-    'username': 'spanigrahy',
-    'password': 'Sueme@0126',
+    'ip': "*******",
+    'username': '*******',
+    'password': '*******',
     'port':'23'
     }
 
 kwargs2 = {
     'device_type': 'cisco_ios_telnet',
-    'ip': "sg209-b1mr4d-cs2-mn",
-    'username': 'spanigrahy',
-    'password': 'Sueme@0126',
+    'ip': "*******",
+    'username': '*******',
+    'password': '*******',
     'port':'23'
     }
 
