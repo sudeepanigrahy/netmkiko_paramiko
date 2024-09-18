@@ -12,10 +12,10 @@ global path_txt_files
 global path_csv_files
 global path_compare_txt_files
 global path_counts
-path_txt_files = r"c:\Users\spanigrahy\Documents\automata\netmiko_paramiko\compare_configs_chrome\run_conf_comparison\data\config_text_files"
-path_csv_files=r"c:\Users\spanigrahy\Documents\automata\netmiko_paramiko\compare_configs_chrome\run_conf_comparison\data\compare_csv_files"
-path_compare_txt_files=r"c:\Users\spanigrahy\Documents\automata\netmiko_paramiko\compare_configs_chrome\run_conf_comparison\data\compare_text_files"
-path_counts = r"c:\Users\spanigrahy\Documents\automata\netmiko_paramiko\compare_configs_chrome\run_conf_comparison\data\counts"
+path_txt_files = r"c:\Users\*******\Documents\automata\netmiko_paramiko\compare_configs_chrome\run_conf_comparison\data\config_text_files"
+path_csv_files=r"c:\Users\*******\Documents\automata\netmiko_paramiko\compare_configs_chrome\run_conf_comparison\data\compare_csv_files"
+path_compare_txt_files=r"c:\Users\*******\Documents\automata\netmiko_paramiko\compare_configs_chrome\run_conf_comparison\data\compare_text_files"
+path_counts = r"c:\Users\*******\Documents\automata\netmiko_paramiko\compare_configs_chrome\run_conf_comparison\data\counts"
 
 with open("no_login.csv", "w", newline='') as filetypeobject:
     header = ["switchname"]
