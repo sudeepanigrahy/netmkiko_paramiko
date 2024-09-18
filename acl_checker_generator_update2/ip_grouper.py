@@ -91,14 +91,6 @@ def subnet_finder(lthree, actual_ip):
     else:
         return "Subnet details couldn't be obtained, check with designer."
 
-"""
-sources = ['10.195.24.112', '10.195.24.111', '10.195.18.62', '10.195.10.50']
-destinations = ['10.195.188.64', '10.195.188.31', '10.195.188.65', '10.195.188.50']
-sources_traces = {'10.195.24.112': '10.195.1.30', '10.195.24.111': '10.195.1.30', \
-                  '10.195.18.62': '10.195.1.18', '10.195.10.50': '10.195.1.2'}
-destinations_traces = {'10.195.188.64': '10.195.1.74', '10.195.188.31': '10.195.1.74', \
-                       '10.195.188.65': '10.195.1.74', '10.195.188.50': '10.195.1.74'}    
-"""
     
 def ipgrouper(sources, destinations, sources_traces, destinations_traces):
     #This function requires to receive the outputs of ipchecker() and iptracer()
