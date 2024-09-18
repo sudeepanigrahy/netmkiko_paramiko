@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Feb 15 09:22:05 2024
-
-@author: sscnoc
-"""
 
 from netmiko import ConnectHandler
 from ipaddress import ip_network
