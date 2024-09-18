@@ -17,12 +17,12 @@ switch = 'sg624-aamr0-aep10-isilon51-as1-sn-vpc403'
 
 try:
     kwargs = {
-        'device_type': 'cisco_nxos','host': switch,'username': 'nwtools','password': '!1Jst4Tls7!'
+        'device_type': 'cisco_nxos','host': switch,'username': ********,'password': ********
         }
     connection = ConnectHandler(**kwargs)
 except:
     kwargs = {
-        'device_type': 'cisco_ios_telnet','host': switch,'username': 'nwtools','password': '!1Jst4Tls7!'
+        'device_type': 'cisco_ios_telnet','host': switch,'username': ********,'password': ********
         }
     connection = ConnectHandler(**kwargs)
     
